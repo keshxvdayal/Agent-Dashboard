@@ -1,0 +1,173 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+  }
+  
+  /* Main container holding the sidebar and dashboard content */
+  .home-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    width: 250px;
+    background-color: #2f3e46;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .sidebar-btn {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #cad2c5;
+    text-align: left;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .sidebar-btn:hover {
+    background-color: #354f52;
+    color: #fff;
+  }
+  
+  .logout-btn {
+    margin-top: auto;
+    background-color: #e63946;
+    color: #fff;
+  }
+  
+  .logout-btn:hover {
+    background-color: #d62828;
+  }
+  
+  /* Dashboard main content area */
+  .dashboard {
+    flex: 1;
+    padding: 30px;
+    background-color: #f4f7fc;
+  }
+  
+  /* Welcome text styling */
+  .welcome-text {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #1d3557;
+  }
+  
+  /* Container for agent cards */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Individual agent card styling */
+  .agent-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .agent-name {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #457b9d;
+  }
+  
+  .agent-id {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #a8dadc;
+  }
+  
+  /* Task table styling */
+  .task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .task-table th, .task-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .task-table thead {
+    background-color: #457b9d;
+    color: #fff;
+  }
+  
+  /* Alternating row colors */
+  .even-row {
+    background-color: #f1f1f1;
+  }
+  
+  .odd-row {
+    background-color: #fff;
+  }
+  
+  /* Status styling */
+  .status {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .completed {
+    background-color: #a8dadc;
+    color: #1d3557;
+  }
+  
+  .pending {
+    background-color: #ffb703;
+    color: #1d3557;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+    }
+    
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+    
+    .dashboard {
+      padding: 20px;
+    }
+    
+    .sidebar h2 {
+      display: none;
+    }
+  }
+  
