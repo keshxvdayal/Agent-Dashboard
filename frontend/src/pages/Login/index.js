@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 import { handleError, handleSuccess } from '../../utils';
+import "./style.css"
 
 function Login() {
 
@@ -27,7 +28,7 @@ function Login() {
             return handleError('email and password are required')
         }
         try {
-            const url = `http://localhost:3001/auth/login`;
+            const url = `https://backend-api-sooty-theta.vercel.app/auth/login`;
             const response = await fetch(url, {
                 method: "POST",
                 headers: {
@@ -57,8 +58,10 @@ function Login() {
     }
 
     return (
-        <div className='container'>
+        <div className='container-main'>
+            
             <h1>Login</h1>
+
             <form onSubmit={handleLogin}>
                 <div>
                     <label htmlFor='email'>Email</label>

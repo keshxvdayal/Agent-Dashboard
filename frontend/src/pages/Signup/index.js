@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 import { handleError, handleSuccess } from '../../utils';
-
+import "./style.css"
 function Signup() {
 
     const [signupInfo, setSignupInfo] = useState({
@@ -27,7 +27,7 @@ function Signup() {
             return handleError('name, email and password are required')
         }
         try {
-            const url = `http://localhost:3001/auth/signup`;
+            const url = `https://backend-api-sooty-theta.vercel.app/auth/signup`;
             const response = await fetch(url, {
                 method: "POST",
                 headers: {
@@ -54,47 +54,50 @@ function Signup() {
         }
     }
     return (
-        <div className='container'>
+        <div className="container">
+        <div className="signup-box">
             <h1>Signup</h1>
             <form onSubmit={handleSignup}>
-                <div>
-                    <label htmlFor='name'>Name</label>
+                <div className="input-group">
+                    <label htmlFor="name">Name</label>
                     <input
                         onChange={handleChange}
-                        type='text'
-                        name='name'
+                        type="text"
+                        name="name"
                         autoFocus
-                        placeholder='Enter your name...'
+                        placeholder="Enter your name..."
                         value={signupInfo.name}
                     />
                 </div>
-                <div>
-                    <label htmlFor='email'>Email</label>
+                <div className="input-group">
+                    <label htmlFor="email">Email</label>
                     <input
                         onChange={handleChange}
-                        type='email'
-                        name='email'
-                        placeholder='Enter your email...'
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email..."
                         value={signupInfo.email}
                     />
                 </div>
-                <div>
-                    <label htmlFor='password'>Password</label>
+                <div className="input-group">
+                    <label htmlFor="password">Password</label>
                     <input
                         onChange={handleChange}
-                        type='password'
-                        name='password'
-                        placeholder='Enter your password...'
+                        type="password"
+                        name="password"
+                        placeholder="Enter your password..."
                         value={signupInfo.password}
                     />
                 </div>
-                <button type='submit'>Signup</button>
-                <span>Already have an account ?
+                <button type="submit" className="signup-btn">Signup</button>
+                <span className="login-link">Already have an account?  
                     <Link to="/login">Login</Link>
                 </span>
             </form>
-            <ToastContainer />
         </div>
+        <ToastContainer />
+    </div>
+    
     )
 }
 

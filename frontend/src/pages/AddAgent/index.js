@@ -20,7 +20,7 @@ function AddAgent() {
         }
     
         try {
-            const url = `http://localhost:3001/agent/add`;
+            const url = `https://backend-api-sooty-theta.vercel.app/agent/add`;
             const response = await fetch(url, {
                 method: "POST",
                 headers: {
@@ -52,7 +52,7 @@ function AddAgent() {
     
 
     return (
-        <div className='container'>
+        <div className='container-main'>
             <h1>Add Agent</h1>
             <form onSubmit={handleAddAgent}>
                 <div>

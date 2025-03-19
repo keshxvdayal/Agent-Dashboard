@@ -171,3 +171,106 @@
     }
   }
   
+  .agent-card-main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+  }
+/* Container for agent cards */
+.agentCards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 cards per row */
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Improved Agent Card Styling */
+.agent-card-main {
+  background-color: #fff;
+  border-left: 6px solid #457b9d; /* Accent border */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 350px; /* Ensures proper spacing */
+}
+
+.agent-card-main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.agent-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.agent-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1d3557;
+}
+
+.agent-id {
+  font-size: 16px;
+  color: #457b9d;
+}
+
+.agent-email, .agent-phone {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .agentCards-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .agentCards-container {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* 1 card per row */
+  }
+}
+
+
+
+.task-table thead {
+  background-color: #457b9d;
+  color: #fff;
+}
+
+.task-table th {
+  padding: 12px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.task-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.task-table tbody tr:hover {
+  background-color: #e0f2fe;
+  cursor: pointer;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .cards-container {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .agent-card {
+      width: 100%;
+  }
+}

@@ -1,0 +1,105 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Full-screen container with a gradient background */
+  .container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #354f52;
+    padding: 20px;
+  }
+  
+  /* Style for the Login heading */
+  .container-main h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Form container styled as a card */
+  form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Spacing between form fields */
+  form > div {
+    margin-bottom: 20px;
+  }
+  
+  /* Labels styling */
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Input field styling */
+  form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus {
+    outline: none;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  }
+  
+  /* Submit button styling */
+  form button {
+    width: 100%;
+    padding: 12px 15px;
+    background: #6B73FF;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  form button:hover {
+    background: #000DFF;
+  }
+  
+  /* Styling for the signup text and link */
+  form span {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  form span a {
+    color: #6B73FF;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  form span a:hover {
+    text-decoration: underline;
+  }
+  
