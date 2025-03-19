@@ -33,7 +33,7 @@ function UploadCSV() {
         formData.append('file', file);
 
         try {
-            const response = await axios.post('http://localhost:3001/upload/upload', formData, {
+            const response = await axios.post('https://backend-api-sooty-theta.vercel.app/upload/upload', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
 
