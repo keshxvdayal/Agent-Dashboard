@@ -78,6 +78,9 @@ const uploadCSV = async (req, res) => {
 
                         const task = new TaskModel({
                             agentId: agents[i]._id,
+                            agentName: agents[i].name, // Add agentName
+                            agentPhone: agents[i].mobile, // Add agentPhone
+                            agentEmail: agents[i].email, // Add agentEmail
                             tasks: agentTasks.map(task => ({
                                 firstName: task.FirstName,
                                 phone: task.Phone,

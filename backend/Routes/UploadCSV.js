@@ -9,3 +9,4 @@ router.post('/upload', upload.single('file'), (req, res, next) => {
 
 router.get('/all', getUploads);
 module.exports = router;
+

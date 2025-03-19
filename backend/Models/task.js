@@ -7,6 +7,9 @@ const TaskSchema = new Schema({
         ref: 'agents',
         required: true
     },
+    agentName: { type: String, required: true },
+    agentPhone: { type: String, required: true },
+    agentEmail: { type: String, required: true },
     tasks: [
         {
             firstName: { type: String, required: true },

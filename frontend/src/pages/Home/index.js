@@ -90,10 +90,10 @@ function Home() {
                     {agents.map((agent) => (
                         <div key={agent._id} className="agent-card">
                             <div className="agent-details">
-                                <h2 className="agent-name">Agent: {agent.name}</h2>
+                            <h2 className="agent-name">Agent: {agent.agentName}</h2>
                                 <h3 className="agent-id">Agent ID: {agent._id}</h3>
-                                <p className="agent-email">Email: {agent.email}</p>
-                                <p className="agent-phone">Phone: {agent.mobile}</p>
+                                <p className="agent-email">Email: {agent.agentEmail}</p>
+                                <p className="agent-phone">Phone: {agent.agentPhone}</p>
                             </div>
                             {/* Tasks Table */}
                             <table className="task-table">
