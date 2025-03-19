@@ -1,3 +1,472 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* General Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #354f52;
+}
+.signup-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading */
+.signup-box h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #667eea;
+    background-color: white;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Signup Button */
+.signup-btn {
+    width: 100%;
+    padding: 10px;
+    background: #667eea;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    background: #5640c4;
+}
+
+/* Login Link */
+.login-link {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.login-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Full-screen container with a gradient background */
+  .container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #354f52;
+    padding: 20px;
+  }
+  
+  /* Style for the Login heading */
+  .container-main h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Form container styled as a card */
+  form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Spacing between form fields */
+  form > div {
+    margin-bottom: 20px;
+  }
+  
+  /* Labels styling */
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Input field styling */
+  form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus {
+    outline: none;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  }
+  
+  /* Submit button styling */
+  form button {
+    width: 100%;
+    padding: 12px 15px;
+    background: #6B73FF;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  form button:hover {
+    background: #000DFF;
+  }
+  
+  /* Styling for the signup text and link */
+  form span {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  form span a {
+    color: #6B73FF;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  form span a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+  }
+  
+  /* Main container holding the sidebar and dashboard content */
+  .home-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    width: 250px;
+    background-color: #2f3e46;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .sidebar-btn {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #cad2c5;
+    text-align: left;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .sidebar-btn:hover {
+    background-color: #354f52;
+    color: #fff;
+  }
+  
+  .logout-btn {
+    margin-top: auto;
+    background-color: #e63946;
+    color: #fff;
+  }
+  
+  .logout-btn:hover {
+    background-color: #d62828;
+  }
+  
+  /* Dashboard main content area */
+  .dashboard {
+    flex: 1;
+    padding: 30px;
+    background-color: #f4f7fc;
+  }
+  
+  /* Welcome text styling */
+  .welcome-text {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #1d3557;
+  }
+  
+  /* Container for agent cards */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Individual agent card styling */
+  .agent-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .agent-name {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #457b9d;
+  }
+  
+  .agent-id {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #a8dadc;
+  }
+  
+  /* Task table styling */
+  .task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .task-table th, .task-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .task-table thead {
+    background-color: #457b9d;
+    color: #fff;
+  }
+  
+  /* Alternating row colors */
+  .even-row {
+    background-color: #f1f1f1;
+  }
+  
+  .odd-row {
+    background-color: #fff;
+  }
+  
+  /* Status styling */
+  .status {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .completed {
+    background-color: #a8dadc;
+    color: #1d3557;
+  }
+  
+  .pending {
+    background-color: #ffb703;
+    color: #1d3557;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+    }
+    
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+    
+    .dashboard {
+      padding: 20px;
+    }
+    
+    .sidebar h2 {
+      display: none;
+    }
+  }
+  
+  .agent-card-main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+  }
+/* Container for agent cards */
+.agentCards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 cards per row */
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Improved Agent Card Styling */
+.agent-card-main {
+  background-color: #fff;
+  border-left: 6px solid #457b9d; /* Accent border */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 350px; /* Ensures proper spacing */
+}
+
+.agent-card-main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.agent-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.agent-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1d3557;
+}
+
+.agent-id {
+  font-size: 16px;
+  color: #457b9d;
+}
+
+.agent-email, .agent-phone {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .agentCards-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .agentCards-container {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* 1 card per row */
+  }
+}
+
+
+
+.task-table thead {
+  background-color: #457b9d;
+  color: #fff;
+}
+
+.task-table th {
+  padding: 12px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.task-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.task-table tbody tr:hover {
+  background-color: #e0f2fe;
+  cursor: pointer;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .cards-container {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .agent-card {
+      width: 100%;
+  }
+}
+form input:focus {
+    outline: none;
+    background: none;
+}
