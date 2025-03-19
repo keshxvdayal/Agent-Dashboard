@@ -3,10 +3,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
-    const [loggedInUser, setLoggedInUser] = useState("Admin");
+    const [loggedInUser] = useState("Admin");
     const [agents, setAgents] = useState([]);
     const [agentInfo, setAgentInfo] = useState([]);
-    const [distributedTasks, setDistributedTasks] = useState([]);
+    const [ setDistributedTasks] = useState([]);
     const navigate = useNavigate();
 
     const fetchDistributedTasks = async () => {
